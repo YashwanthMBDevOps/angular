@@ -12,8 +12,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
-          "options": {
-            "baseHref": "https://github.com/YashwanthMBDevOps/angular.git",  
+          "options": {  
             "outputPath": "dist/angular_practice",
             "index": "src/index.html",
             "browser": "src/main.ts",
