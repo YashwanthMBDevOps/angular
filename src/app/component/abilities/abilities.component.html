@@ -1,0 +1,121 @@
+<!-- <div class="row">
+    Data binding 
+    <div class="col-3">
+        {{AngularName}}
+    </div>
+    <div class="col-3">
+        {{AngularVersion}}
+    </div>
+    <div class="col-3">
+        {{InputTypeR}}
+    </div>
+    <div class="col-3">
+        {{pulldown}}
+    </div>
+</div>
+ Property Binding 
+<div class="row">
+    <div class="col-3">
+        <input type="text" [value]="AngularName">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+         Form moduel two binding 
+        <input type="text" [(ngModel)]="AngularName">
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <button (click)="showAlertMessage()">Alert Button</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+       <select [(ngModel)]="pulldown">
+        <option value="KA">KA</option>
+        <option value="AP">AP</option>
+        <option value="MP">MP</option>
+       </select>
+    </div>
+</div>
+<div  class="col-1" >
+<div class="btn-group" class="row">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <button type="button" class="btn btn-primary">Sony</button>
+  </div>
+</div> -->
+
+<div class="container mt-4">
+  <div class="text-center">
+    <div class="row-6" >
+      <p>THIS IS THE SAMPLE WEB PAGE CONTAINS SAMPLE API RESPONSE</p>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-3 text-center"> 
+      <p>Click the button below to see the  Abilities of Ditto:</p>
+      <button class="btn btn-primary" (click)="showAlertMessage('Abilities')">Abilities</button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-3 text-center"> 
+      <p>Click the button below to see the Game Indices of Ditto:</p>
+      <button class="btn btn-primary" (click)="showAlertMessage('Games')">Games</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="showAbilities">
+<div *ngIf="pokeApiAbilityResp.length > 0" class="container mt-4">
+    <h2>Abilities of Ditto:</h2>
+    <table class="table table-bordered table-pink text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Ability Name</th>
+          <th>Is Hidden</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ability of pokeApiAbilityResp">
+          <td>{{ ability.ability.name }}</td>
+          <td>{{ ability.is_hidden ? 'Yes' : 'No' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="pokeApiAbilityResp.length === 0">
+    <p>Loading abilities...</p>
+  </div>
+  </div>
+  <div *ngIf="showGameIndices">
+ 
+<div *ngIf="game_indices.length > 0" class="container mt-4">
+    <h2>Game Indices of Ditto:</h2>
+    <table class="table table-bordered table-pink text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Game Name</th>
+          <th>Game Index</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let game of game_indices.slice(0,10)">
+          <td>{{ game.version.name }}</td>
+          <td>{{ game.game_index }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="game_indices.length === 0">
+    <p>Loading Game Details...</p>
+  </div>
+</div>

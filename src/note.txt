@@ -1,0 +1,17 @@
+Data Binding 
+
+Interpolation : {{}}
+property binding []
+
+Two way data Binding(ngModel)
+Event Binding
+
+
+// Directives
+
+structural : 
+ngIf , ngFor || ngClass , ngStyle
+
+
+attribute : 
+

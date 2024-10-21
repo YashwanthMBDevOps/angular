@@ -1,0 +1,13 @@
+.table-pink {
+    background-color: #ebb0c9; /* Pink background for the entire table */
+    color: black; /* Black text color */
+  }
+  
+  .table-pink th {
+    background-color: #ffeaf2; /* Optional: Different shade for header cells */
+    color: black; /* Ensure header text is also black */
+  }
+  .table-pink td {
+    background-color: #f3f5e7; /* Optional: Different shade for header cells */
+    color: black; /* Ensure header text is also black */
+  }
